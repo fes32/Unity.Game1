@@ -4,7 +4,6 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Player))]
-
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float _speed;
@@ -28,12 +27,12 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         _player = GetComponent<Player>();
-        _player.Dying += OnPlayerDied;
+        _player.Died += OnPlayerDied;
     }
 
     private void OnDisable()
     {
-        _player.Dying -= OnPlayerDied;
+        _player.Died -= OnPlayerDied;
     }
 
     private void Update()

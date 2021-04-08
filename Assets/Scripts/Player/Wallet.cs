@@ -5,13 +5,13 @@ using UnityEngine.Events;
 
 public class Wallet : MonoBehaviour
 {
-    public int CountOfCoins { get; private set; } = 0;
+    public int Coins { get; private set; } = 0;
 
-    public event UnityAction<int> CountOfCoinsChanged;
+    public event UnityAction<int> CoinsChanged;
 
-    public void AddCoin()
+    public void CoinAdded()
     {
-        CountOfCoins++;
-        CountOfCoinsChanged?.Invoke(CountOfCoins);
+        Coins++;
+        CoinsChanged?.Invoke(Coins);
     }
 }

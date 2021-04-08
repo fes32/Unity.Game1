@@ -10,12 +10,12 @@ public class CountOfPlayerCoins : MonoBehaviour
 
     private void OnEnable()
     {
-        _playerWallet.CountOfCoinsChanged += OnCountOfPlayerCoinChanged;
+        _playerWallet.CoinsChanged += OnCountOfPlayerCoinChanged;
     }
 
     private void OnDisable()
     {
-        _playerWallet.CountOfCoinsChanged -= OnCountOfPlayerCoinChanged;
+        _playerWallet.CoinsChanged -= OnCountOfPlayerCoinChanged;
     }
 
     private void OnCountOfPlayerCoinChanged(int count)

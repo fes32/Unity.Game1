@@ -42,22 +42,22 @@ public class MainMenu : MonoBehaviour
     private void OnInfoButtonClick()
     {
         _infoPanel.Activate();
-        ButtonOff();
+        ButtonsOff();
     }
 
     private void OnInfoPanelClosed()
     {
-        ButtonOn();
+        ButtonsOn();
     }
 
-    private void ButtonOff()
+    private void ButtonsOff()
     {
         _playButton.gameObject.SetActive(false);
         _exitButton.gameObject.SetActive(false);
         _infoButton.gameObject.SetActive(false);
     }
 
-    private void ButtonOn()
+    private void ButtonsOn()
     {
         _playButton.gameObject.SetActive(true);
         _exitButton.gameObject.SetActive(true);

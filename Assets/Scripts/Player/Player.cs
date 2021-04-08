@@ -8,28 +8,27 @@ using UnityEngine.Events;
 public class Player : MonoBehaviour
 {
     private PlayerMovement _movement;
-    private Wallet _coinWallet;
+    private Wallet _coinsWallet;
 
-    public event UnityAction Dying; 
+    public event UnityAction Died; 
 
     private void OnEnable()
     {
         _movement = GetComponent<PlayerMovement>();
-        _coinWallet = GetComponent<Wallet>();
+        _coinsWallet = GetComponent<Wallet>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.TryGetComponent(out Coin coin))
         {
-            _coinWallet.AddCoin();
+            _coinsWallet.CoinAdded();
             coin.gameObject.SetActive(false);
         }
 
         else if (other.gameObject.GetComponent<Barrier>())
         {
-            Dying?.Invoke();
+            Died?.Invoke();
         }
     }
-
 }

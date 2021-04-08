@@ -11,15 +11,15 @@ public class Game : MonoBehaviour
 
     private void OnEnable()
     {
-        _player.Dying += PlayerDying;
+        _player.Died += GameOver;
     }
 
     private void OnDisable()
     {
-        _player.Dying -= PlayerDying;
+        _player.Died -= GameOver;
     }
 
-    private void PlayerDying()
+    private void GameOver()
     {
        SceneManager.LoadScene(_menuSceneIndex);
     }
