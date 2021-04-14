@@ -11,11 +11,12 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody _rigidbody;
     private Player _player;
-    private bool _grounded=false;
+    private bool _grounded = false;
 
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _player = GetComponent<Player>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -26,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        _player = GetComponent<Player>();
         _player.Died += OnPlayerDied;
     }
 

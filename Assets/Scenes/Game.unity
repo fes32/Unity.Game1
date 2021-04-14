@@ -199,8 +199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9a1f42176e558840985568b7316e91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerWallet: {fileID: 1166008922}
-  _countOfCoins: {fileID: 1417845824}
+  _wallet: {fileID: 1166008922}
+  _coins: {fileID: 1417845824}
 --- !u!114 &160843114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -583,10 +583,10 @@ GameObject:
   - component: {fileID: 1166008918}
   - component: {fileID: 1166008921}
   - component: {fileID: 1166008920}
-  - component: {fileID: 1166008919}
   - component: {fileID: 1166008922}
   - component: {fileID: 1166008923}
   - component: {fileID: 1166008924}
+  - component: {fileID: 1166008919}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -619,11 +619,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1166008917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 395cbd31e025902488ac51a8a66f6ad6, type: 3}
+  m_Script: {fileID: 11500000, guid: 8457be580513e5e44a9b9d57186671e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _jumpForce: 350
   _speed: 3
+  _jumpForce: 300
 --- !u!54 &1166008920
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -702,7 +702,7 @@ GameObject:
   - component: {fileID: 1417845825}
   - component: {fileID: 1417845824}
   m_Layer: 5
-  m_Name: CountOfPlayerCoin (TMP)
+  m_Name: WalletPresenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

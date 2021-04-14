@@ -7,7 +7,7 @@ public class Game : MonoBehaviour
 {
     [SerializeField] private Player _player;
 
-    private int _menuSceneIndex;
+    const int _menuSceneIndex = 0;
 
     private void OnEnable()
     {
